@@ -3,8 +3,12 @@ import streamlit as st
 import pandas as pd
 
 # Load the saved scaler and model
-scaler = pickle.load(open('C:/Users/User/Diabetes Prediction/scaler.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/User/Diabetes Prediction/trained_model.sav', 'rb'))
+#scaler = pickle.load(open('C:/Users/User/Diabetes Prediction/scaler.sav', 'rb'))
+#loaded_model = pickle.load(open('C:/Users/User/Diabetes Prediction/trained_model.sav', 'rb'))
+
+scaler = pickle.load(open('scaler.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
+
 
 def validate_input(input_data):
     # Check if all fields are provided
